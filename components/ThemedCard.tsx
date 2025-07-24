@@ -1,22 +1,28 @@
-import { Colors } from '@/constants/Colors';
-import React from 'react';
-import { StyleProp, View, ViewProps, ViewStyle, useColorScheme } from 'react-native';
 
+import { useTheme } from '@/contexts/ThemeContext';
+import React from 'react';
+import { StyleProp, View, ViewProps, ViewStyle } from 'react-native';
 type ThemedCardProps = ViewProps & {
     style?: StyleProp<ViewStyle>;
     lightColor? : string;
     darkColor?: string;
-
 }
 
-const ThemedCard = ({style, ...props}:ThemedCardProps) => {
-    const colorScheme= useColorScheme() === 'dark' ? 'dark' : 'light';
-    const theme = Colors[colorScheme];
+const ThemedCard = ({style, lightColor, darkColor, ...props}:ThemedCardProps) => {
+   
+    const {theme,colorScheme} = useTheme();
+    
+    
+    const backgroundColor = colorScheme === 'dark' 
+        ? darkColor || theme.uiBackground 
+        : lightColor || theme.uiBackground;
 
   return (
-    <View>
-      <Text>ThemedCard</Text>
-    </View>
+    <View 
+      style={[{ backgroundColor }, style]}
+      className="rounded-lg p-4 shadow"
+      {...props} 
+    />
   )
 }
 

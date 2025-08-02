@@ -1,26 +1,27 @@
+
 export const Colors = {
     primary: "#046C7A",
     warning: "#EF4444",
 
 
     dark: {
-        primary: "#09747F",
-        text: "#d4d4d4",
-        title: "#FAFAFA",
-        background: "#252231",
+        primary: "#EC8433",
+        text: "#E2E8F0",
+        title: "#FFFFFF",
+        background: "#1A202C",
         maskBackground: "#20132b",
         iconColor: "#EC8433",
-        uiBackground: "#2f2b3d",
+        uiBackground: "#2D3748",
 
     },
     light: {
         primary: "#05B1B9",
-        text: "#625f72",
-        title: "#20132b",
-        background: "#e0dfe8",
+        text: "#2D3748",
+        title: "#1A202C",
+        background: "#F7FAFC",
         maskBackground: "#20132b",
         iconColor: "#FFAE5F",
-        uiBackground: "#d6d5e1",
+        uiBackground: "#FFFFFF",
 
 
 

@@ -20,7 +20,7 @@ const ThemedCard = ({style, lightColor, darkColor, ...props}:ThemedCardProps) =>
   return (
     <View 
       style={[{ backgroundColor }, style]}
-      className="rounded-lg p-4 shadow"
+      className="rounded-lg p-4 shadow flex"
       {...props} 
     />
   )
